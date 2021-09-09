@@ -1,57 +1,62 @@
 import React from "react";
 import styled from "styled-components";
 import { About } from "../style";
+import Toggle from "./Toggle";
+import { useScroll } from "./useScroll";
+//Animation
+import { AnimateSharedLayout } from "framer-motion";
+import { scrollReveal } from "../animation";
 
 const FaqSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Faq>
+    <Faq
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How Do I Start?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            sed, neque distinctio delectus ut deserunt!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            sed, neque distinctio delectus ut deserunt!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Diferrent Payment Methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            sed, neque distinctio delectus ut deserunt!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer.</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-            sed, neque distinctio delectus ut deserunt!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How Do I Start?">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Molestiae sed, neque distinctio delectus ut deserunt!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Molestiae sed, neque distinctio delectus ut deserunt!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Diferrent Payment Methods">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Molestiae sed, neque distinctio delectus ut deserunt!
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What products do you offer">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Molestiae sed, neque distinctio delectus ut deserunt!
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
@@ -69,7 +74,7 @@ const Faq = styled(About)`
     background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
-    width: 100%;
+    width: 90%;
   }
   .question {
     padding: 3rem 0rem;

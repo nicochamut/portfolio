@@ -1,5 +1,6 @@
 import React from "react";
-import home1 from "../img/home1.png"
+import me from "../img/me.jpg";
+
 //styled
 import styled from "styled-components";
 import { About, Description, Hide, Image } from "../style";
@@ -7,31 +8,33 @@ import { About, Description, Hide, Image } from "../style";
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
+
 const AboutSection = () => {
   return (
     <About>
       <Description>
         <motion.div className="title">
           <Hide>
-            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>Nicolás J. Chamut</motion.h2>
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnim}>
-              your <span>dreams</span>{" "}
+              <span>Front-end </span>{" "}
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>come true.</motion.h2>
+            <motion.h2 variants={titleAnim}>Developer.</motion.h2>
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Contact us for any photography ideas that you have. We have
-          professionals with amazing skills
+          Contact me for any idea you have and I will materialize it for you.
         </motion.p>
-        <motion.button variants={fade}>Contact us</motion.button>
+        <motion.button style={{ borderRadius: "5px" }} variants={fade}>
+          Contact me
+        </motion.button>
       </Description>
       <Image>
-        <motion.img variants={photoAnim} src={home1} alt="guy with camera" />
+        <motion.img variants={photoAnim} src={me} alt="guy with camera" />
       </Image>
       <Wave />
     </About>
