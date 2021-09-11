@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { About } from "../style";
+
 // Images
-import athlete from "../img/athlete-small.png";
+
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import player from "../img/player.jpg";
@@ -18,13 +18,12 @@ import {
   lineAnim,
 } from "../animation";
 import { useScroll } from "../components/useScroll";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import ScrollTop from "../components/ScrollTop";
+
 
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
-  const [element3, controls3] = useScroll();
 
   return (
     <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
@@ -66,6 +65,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="goodtimes"></img>
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
@@ -79,6 +79,9 @@ const Work = styled(motion.div)`
     color: #ffffff;
     font-size: 3rem;
   }
+  @media (max-width: 1300px){
+        padding: 2rem 2rem
+      }
 `;
 
 const Hide = styled.div`

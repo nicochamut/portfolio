@@ -74,7 +74,7 @@ const Faq = styled(About)`
     background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
-    width: 90%;
+    width: 100%;
   }
   .question {
     padding: 3rem 0rem;
