@@ -2,7 +2,6 @@ import React from "react";
 import me from "../img/me.jpg";
 
 //styled
-import styled from "styled-components";
 import { About, Description, Hide, Image } from "../style";
 // Framer motion
 import { motion } from "framer-motion";
@@ -27,11 +26,8 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Contact me for any idea you have and I will materialize it for you.
+          Hi! I'm a passionate and autodidactic student with a serious interest in front end development. 
         </motion.p>
-        <motion.button style={{ borderRadius: "5px" }} variants={fade}>
-          Contact me
-        </motion.button>
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={me} alt="me" />

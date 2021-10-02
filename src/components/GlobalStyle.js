@@ -55,7 +55,7 @@ h2 {
  }
  span{
      font-weight: bold;
-     color: #23d997;
+     color: #26eea5;
  }
  p{
      padding: 3rem 0rem;

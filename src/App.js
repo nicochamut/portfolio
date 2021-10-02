@@ -1,15 +1,14 @@
 import React from "react";
-import AboutUs from "./pages/AboutUs";
-import GlobalStyle from "./components/GlobalStyle"
+import AboutMe from "./pages/AboutMe";
+import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import ContactUs from "./pages/ContactUs";
-import OurWork from "./pages/OurWork";
-import MovieDetail from "./pages/MovieDetails";
+import MyWork from "./pages/MyWork";
+import WorkDetail from "./pages/WorkDetails";
 // Router
 import { Switch, Route, useLocation } from "react-router-dom";
 //Animation
 import { AnimatePresence } from "framer-motion";
-
 
 function App() {
   const location = useLocation();
@@ -21,13 +20,13 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
-            <AboutUs />
+            <AboutMe />
           </Route>
           <Route path="/work" exact>
-            <OurWork />
+            <MyWork />
           </Route>
           <Route path="/work/:id">
-            <MovieDetail />
+            <WorkDetail />
           </Route>
           <Route path="/contact">
             <ContactUs />

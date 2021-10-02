@@ -3,9 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // Images
-
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+import ignitegames from "../img/ignitegames.jpg";
+import puzzle from "../img/puzzle.jpg";
 import player from "../img/player.jpg";
 // Animation
 import { motion } from "framer-motion";
@@ -20,8 +19,7 @@ import {
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
-
-const OurWork = () => {
+const MyWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
 
@@ -36,21 +34,21 @@ const OurWork = () => {
       <Movie>
         <motion.h2 variants={fade}>{`<MusicPlayer />`}</motion.h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
-        <Link to="/work/the-athlete">
-          <Hide>
+        <Link className="link-img" to="/work/musicplayer">
+          <Hide className="link-img">
             <motion.img
               variants={photoAnim}
               src={player}
-              alt="athlete"
+              alt="playermusic"
             ></motion.img>
           </Hide>
         </Link>
       </Movie>
       <Movie variants={fade} animate={controls} initial="hidden" ref={element}>
-        <h2>The Racer</h2>
+        <h2>{`<GamesSearch />`}</h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="theracer"></img>
+        <Link to="/work/ignitegames">
+          <img src={ignitegames} alt="games"></img>
         </Link>
       </Movie>
       <Movie
@@ -59,10 +57,10 @@ const OurWork = () => {
         initial="hidden"
         ref={element2}
       >
-        <h2>Good Times</h2>
+        <h2>{`<Puzzle />`}</h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="goodtimes"></img>
+        <Link to="/work/puzzle">
+          <img src={puzzle} alt="puzzle"></img>
         </Link>
       </Movie>
       <ScrollTop />
@@ -74,14 +72,15 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  background: white;
   h2 {
     padding: 1rem 0rem;
-    color: #ffffff;
+    color: #1b1b1b;
     font-size: 3rem;
   }
-  @media (max-width: 1300px){
-        padding: 2rem 2rem
-      }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const Hide = styled.div`
@@ -99,6 +98,12 @@ const Movie = styled(motion.div)`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+  }
+  @media (max-width: 500px) {
+    img {
+      width: 100%;
+      height: 60vh;
+    }
   }
 `;
 
@@ -123,4 +128,5 @@ const Frame3 = styled(Frame1)`
 const Frame4 = styled(Frame1)`
   background: #23dd97;
 `;
-export default OurWork;
+
+export default MyWork;

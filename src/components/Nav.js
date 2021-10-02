@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import logonich from "../img/logonich.png";
 const Nav = () => {
   return (
     <StyledNav>
       <h1>
         <Link to="/" id="logo">
-          NichDev
+          <img src={logonich} alt="logonich" />
         </Link>
       </h1>
       <ul>
@@ -16,7 +17,7 @@ const Nav = () => {
           <Line />
         </li>
         <li>
-          <Link to="/work"> My Work</Link>
+          <Link to="/work"> MyWork</Link>
         </li>
         <li>
           <Link to="/contact"> Contact</Link>
@@ -54,6 +55,13 @@ const StyledNav = styled.nav`
     font-size: 1.7rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+    img {
+      width: 9rem;
+      height: 4.5rem;
+      object-fit: cover;
+      padding: 0;
+      margin: 0;
+    }
   }
   li {
     padding-left: 6rem;
@@ -62,13 +70,14 @@ const StyledNav = styled.nav`
 
   @media (max-width: 1300px) {
     flex-direction: column;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
+
     #logo {
       display: inline-block;
       margin: 1rem;
     }
     ul {
-      padding: 2rem;
+      padding: 1rem;
       justify-content: space-around;
       width: 100%;
       li {

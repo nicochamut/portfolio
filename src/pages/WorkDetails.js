@@ -1,41 +1,53 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import { MovieState } from "../movieState";
+import { WorkState } from "../WorkState";
 // Animation
 import { motion } from "framer-motion";
-import {pageAnimation} from "../animation"
+import { pageAnimation } from "../animation";
 
-const MovieDetail = () => {
+const WorkDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, SetMovies] = useState(MovieState);
-  const [movie, SetMovie] = useState(null);
+  const [works] = useState(WorkState);
+  const [work, SetWork] = useState(null);
 
   //useEffect
   useEffect(() => {
-    const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
-    SetMovie(currentMovie[0]);
-  }, [movies, url]);
+    const currentWork = works.filter((stateWork) => stateWork.url === url);
+    SetWork(currentWork[0]);
+  }, [works, url]);
   return (
     <>
-      {movie && (
-        <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+      {work && (
+        <Details
+          exit="exit"
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
-            <h2>{movie.title}</h2>
-            <img src={movie.mainImg}></img>
+            <h2>{work.title}</h2>
+            <img src={work.mainImg} alt="work1"></img>
+            <p>
+              weblink:
+              <a href={work.link}>{work.link}</a>
+              <br />
+              repository:
+              <a href={work.repository}>{work.repository}</a>
+            </p>
           </HeadLine>
-          <Awards>
-            {movie.awards.map((award) => (
+          <Works>
+            {work.descriptions.map((award) => (
               <Award
                 title={award.title}
                 description={award.description}
                 key={award.title}
               />
             ))}
-          </Awards>
+          </Works>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt="movie"></img>
+            <img src={work.secondaryImg} alt="work"></img>
           </ImageDisplay>
         </Details>
       )}
@@ -62,9 +74,39 @@ const HeadLine = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+  p {
+    position: absolute;
+    margin: 2.5rem 0rem 0.5rem;
+    left: 30%;
+  }
+  a {
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    color: #23d997;
+  }
+  @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 2rem;
+      transform: translate(-50%, -30%);
+    }
+    img {
+      width: 95%;
+      height: 60vh;
+      object-fit: cover;
+      margin: 0rem 1rem 0rem 1rem;
+    }
+    p {
+      left: 8%;
+      font-size: 1.2rem;
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;
 
-const Awards = styled.div`
+const Works = styled.div`
   min-height: 80vh;
   display: flex;
   margin: 5rem 10rem;
@@ -99,6 +141,11 @@ const ImageDisplay = styled.div`
     height: 100vh;
     object-fit: cover;
   }
+  @media screen and (max-width: 500px) {
+    img {
+      translate: transform(200px 10px);
+    }
+  }
 `;
 
 //Award Component
@@ -112,4 +159,4 @@ const Award = ({ title, description }) => {
   );
 };
 
-export default MovieDetail;
+export default WorkDetail;
