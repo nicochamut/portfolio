@@ -32,7 +32,7 @@ const MyWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <motion.h2 variants={fade}>{`<MusicPlayer />`}</motion.h2>
+        <motion.h2 variants={fade}>Music Player</motion.h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
         <Link className="link-img" to="/work/musicplayer">
           <Hide className="link-img">
@@ -45,7 +45,7 @@ const MyWork = () => {
         </Link>
       </Movie>
       <Movie variants={fade} animate={controls} initial="hidden" ref={element}>
-        <h2>{`<GamesSearch />`}</h2>
+        <h2>API Games</h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
         <Link to="/work/ignitegames">
           <img src={ignitegames} alt="games"></img>
@@ -57,7 +57,7 @@ const MyWork = () => {
         initial="hidden"
         ref={element2}
       >
-        <h2>{`<Puzzle />`}</h2>
+        <h2>Puzzle</h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
         <Link to="/work/puzzle">
           <img src={puzzle} alt="puzzle"></img>

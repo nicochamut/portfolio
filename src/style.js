@@ -16,6 +16,9 @@ export const About = styled(motion.div)`
     padding: 2rem 2rem;
     text-align: center;
   }
+  @media (max-width: 500px) {
+    min-height: 70vh;
+  }
 `;
 
 export const Description = styled.div`
@@ -33,6 +36,12 @@ export const Description = styled.div`
   }
   @media (max-width: 500px) {
     margin-top: 1rem;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 export const Image = styled.div`

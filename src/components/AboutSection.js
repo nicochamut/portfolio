@@ -3,6 +3,7 @@ import me from "../img/me.jpg";
 
 //styled
 import { About, Description, Hide, Image } from "../style";
+import styled from "styled-components";
 // Framer motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
@@ -11,7 +12,7 @@ import Wave from "./Wave";
 const AboutSection = () => {
   return (
     <About>
-      <Description>
+      <Descrip>
         <motion.div className="title">
           <Hide>
             <motion.h2 variants={titleAnim}>Nicolás J. Chamut</motion.h2>
@@ -26,18 +27,38 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Hi! I'm a passionate and autodidactic student with a serious interest in front end development. 
+          Hi! I'm a passionate and autodidactic student with a serious interest
+          in front end development.
         </motion.p>
-      </Description>
-      <Image>
+      </Descrip>
+      <ImageAbout>
         <motion.img variants={photoAnim} src={me} alt="me" />
-      </Image>
+      </ImageAbout>
       <Wave />
     </About>
   );
 };
 
+const Descrip = styled(Description)`
+  @media screen and (max-width: 500px) {
+    margin: 0px;
+    padding: 0px;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+`;
 
+const ImageAbout = styled(Image)`
+  @media screen and (max-width: 500px) {
+    img {
+      height: 30vh;
+    }
+  }
+`;
 
 
 export default AboutSection 

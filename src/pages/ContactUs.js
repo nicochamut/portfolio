@@ -1,97 +1,77 @@
 import React from "react";
-
-// Animation
-import { motion } from "framer-motion";
-import { pageAnimation, titleAnim } from "../animation";
 import styled from "styled-components";
-import logodev from "../img/logodev.png";
+import { About } from "../style";
+import Toggle from "../components/Toggle";
+import { useScroll } from "../components/useScroll";
+//Animation
+import { AnimateSharedLayout } from "framer-motion";
+import { scrollReveal } from "../animation";
 
 const ContactUs = () => {
+  const [element, controls] = useScroll();
   return (
-    <ContactStyle
-      exit="exit"
-      variants={pageAnimation}
+    <Faq
+      variants={scrollReveal}
+      animate={controls}
       initial="hidden"
-      animate="show"
-      style={{ background: "#fff" }}
+      ref={element}
     >
-      <Title>
-        <Hide>
-          <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
-        </Hide>
-      </Title>
-      <div>
-        <Hide>
-          <Social variants={titleAnim}>
-            <Circle />
-            <a href="tel:+542477397546">send me a message</a>
-          </Social>
-        </Hide>
-        <Hide>
-          <Social variants={titleAnim}>
-            <Circle />
-            <a href="mailto:njchamut@gmail.com">send an email</a>
-          </Social>
-        </Hide>
-        <Hide>
-          <Social variants={titleAnim}>
-            <Circle />
-            <a href="ig">social media </a>
-          </Social>
-        </Hide>
-      </div>
-    </ContactStyle>
+      <h2>
+        <span>Keep in touch.</span>
+      </h2>
+      <AnimateSharedLayout>
+        <Toggle title="Send an email">
+          <div className="answer">
+            <p>njchamut@gmail.com</p>
+            <p>nichdeveloper@gmail.com</p>
+          </div>
+        </Toggle>
+        <Toggle title="Send a message">
+          <div className="answer">
+            <p>+542477397546.</p>
+          </div>
+        </Toggle>
+        <Toggle title="Social Media">
+          <div className="answer">
+            <p>Instagram: @nicolaschamut</p>
+            <p>Tw: @njchamut</p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+    </Faq>
   );
 };
 
-const ContactStyle = styled(motion.div)`
-  padding: 5rem 10rem;
-  color: #353535;
-  min-height: 90vh;
-  img {
-    position: absolute;
-    width: 30rem;
-    height: 30rem;
-    object-fit: cover;
-    right: 18%;
-    top: 26%;
-    border-radius: 50%;
+const Faq = styled(About)`
+  display: block;
+  span {
+    display: block;
   }
-  @media (max-width: 1500px) {
-    padding: 1rem;
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: lighter;
+  }
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  .answer {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
     h2 {
       font-size: 3rem;
     }
-  }
-`;
-
-const Title = styled.div`
-  margin-bottom: 4rem;
-  color: black;
-  @media (max-width: 1500px) {
-    margin-top: 2rem;
-  }
-`;
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
-const Circle = styled.div`
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  background: linear-gradient(45deg, #680696, #27d997);
-`;
-const Social = styled(motion.div)`
-  display: flex;
-
-  align-items: center;
-  a {
-    margin: 2rem;
-    text-decoration: none;
-    font-size: 3rem;
-    color: #353535;
-    font-family: "Inter", sans-serif;
   }
 `;
 

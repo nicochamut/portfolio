@@ -38,11 +38,11 @@ const WorkDetail = () => {
             </p>
           </HeadLine>
           <Works>
-            {work.descriptions.map((award) => (
-              <Award
-                title={award.title}
-                description={award.description}
-                key={award.title}
+            {work.descriptions.map((data) => (
+              <Info
+                title={data.title}
+                description={data.description}
+                key={data.title}
               />
             ))}
           </Works>
@@ -97,10 +97,10 @@ const HeadLine = styled.div`
       margin: 0rem 1rem 0rem 1rem;
     }
     p {
-      left: 8%;
-      font-size: 1.2rem;
+      left: 6%;
+      font-size: 1.3rem;
       a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -118,19 +118,33 @@ const Works = styled.div`
   }
 `;
 
-const AwardStyle = styled.div`
-  padding: 5rem;
+const InfoStyle = styled.div`
+  padding: 2rem 0rem 2rem 20%;
   h3 {
     font-size: 2rem;
   }
+  h3:first-child {
+    padding-top: 10rem;
+  }
   .line {
-    width: 100%;
+    width: 30%;
     background: #23d997;
     height: 0.5rem;
     margin: 1rem 0rem;
   }
   p {
     padding: 2rem 0rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    padding-bottom: 0rem;
+  }
+  p {
+    padding: 0.5rem;
+  }
+  .line {
+    width: 80%;
   }
 `;
 
@@ -141,21 +155,16 @@ const ImageDisplay = styled.div`
     height: 100vh;
     object-fit: cover;
   }
-  @media screen and (max-width: 500px) {
-    img {
-      translate: transform(200px 10px);
-    }
-  }
 `;
 
-//Award Component
-const Award = ({ title, description }) => {
+//Info Component
+const Info = ({ title, description }) => {
   return (
-    <AwardStyle>
+    <InfoStyle>
       <h3>{title}</h3>
       <div className="line"></div>
       <p>{description}</p>
-    </AwardStyle>
+    </InfoStyle>
   );
 };
 
