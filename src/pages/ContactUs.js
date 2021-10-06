@@ -24,7 +24,6 @@ const ContactUs = () => {
           <div className="answer">
             <p>njchamut@gmail.com</p>
             <p>nichdeveloper@gmail.com</p>
-            <input>hello</input>
           </div>
         </Toggle>
         <Toggle title="Send a message">
