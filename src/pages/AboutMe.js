@@ -5,8 +5,10 @@ import ServicesSection from "../components/ServicesSection";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
+import { MobileImg } from "../components/MobileImg";
 
 const AboutMe = () => {
+  console.log(MobileImg());
   return (
     <motion.div
       exit="exit"

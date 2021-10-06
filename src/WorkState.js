@@ -1,18 +1,23 @@
 //Import Images
 
 import playerwork from "./img/playerwork.jpg";
+import playerworkMobile from "./img/playerworkMobile.jpg";
 import playerdetail from "./img/playerdetail.jpg";
+import playerMobile from "./img/playerMobile.jpg";
 
 import ignitedetail from "./img/ignitedetail.jpg";
 import searchgames from "./img/searchgames.jpg";
+import searchgamesMobile from "./img/searchgamesMobile.jpg";
 import puzzle from "./img/puzzle.jpg";
+
+import { MobileImg } from "./components/MobileImg";
 
 export const WorkState = () => {
   return [
     {
       title: "Music Player",
-      mainImg: playerwork,
-      secondaryImg: playerdetail,
+      mainImg: MobileImg() ? playerworkMobile : playerwork,
+      secondaryImg: MobileImg() ? playerMobile : playerdetail,
       url: "/work/musicplayer",
       link: "https://nicochamut.github.io/player/",
       repository: "https://github.com/nicochamut/player/",
@@ -31,7 +36,7 @@ export const WorkState = () => {
       title: "Games Search",
       mainImg: ignitedetail,
       url: "/work/ignitegames",
-      secondaryImg: searchgames,
+      secondaryImg: MobileImg() ? searchgamesMobile : searchgames,
       link: "https://nicochamut.github.io/ignitegames/#/",
       repository: "https://github.com/nicochamut/ignitegames",
       descriptions: [
