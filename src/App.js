@@ -9,7 +9,7 @@ import WorkDetail from "./pages/WorkDetails";
 import { Switch, Route, useLocation } from "react-router-dom";
 //Animation
 import { AnimatePresence } from "framer-motion";
-import { MobileImg } from "./components/MobileImg";
+
 
 function App() {
   const location = useLocation();
