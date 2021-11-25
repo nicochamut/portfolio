@@ -1,31 +1,27 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.937707b0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.937707b0.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.7282bef7.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.7282bef7.js.map",
-    "static/js/2.4b5698c7.chunk.js": "/portfolio/static/js/2.4b5698c7.chunk.js",
-    "static/js/2.4b5698c7.chunk.js.map": "/portfolio/static/js/2.4b5698c7.chunk.js.map",
-    "static/js/3.fd19c6a2.chunk.js": "/portfolio/static/js/3.fd19c6a2.chunk.js",
-    "static/js/3.fd19c6a2.chunk.js.map": "/portfolio/static/js/3.fd19c6a2.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.c7362e6a.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c7362e6a.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.3d2de672.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.3d2de672.js.map",
+    "static/js/2.7d9b4e62.chunk.js": "/portfolio/static/js/2.7d9b4e62.chunk.js",
+    "static/js/2.7d9b4e62.chunk.js.map": "/portfolio/static/js/2.7d9b4e62.chunk.js.map",
+    "static/js/3.749cd6ab.chunk.js": "/portfolio/static/js/3.749cd6ab.chunk.js",
+    "static/js/3.749cd6ab.chunk.js.map": "/portfolio/static/js/3.749cd6ab.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/js/2.4b5698c7.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4b5698c7.chunk.js.LICENSE.txt",
-    "static/media/ignitedetail.3d9eba04.jpg": "/portfolio/static/media/ignitedetail.3d9eba04.jpg",
-    "static/media/ignitegames.2e24a0b1.jpg": "/portfolio/static/media/ignitegames.2e24a0b1.jpg",
+    "static/js/2.7d9b4e62.chunk.js.LICENSE.txt": "/portfolio/static/js/2.7d9b4e62.chunk.js.LICENSE.txt",
+    "static/media/PlayerMainDetail.0596b719.png": "/portfolio/static/media/PlayerMainDetail.0596b719.png",
+    "static/media/crudapp.3577362d.png": "/portfolio/static/media/crudapp.3577362d.png",
+    "static/media/ignitedetail.e092949c.png": "/portfolio/static/media/ignitedetail.e092949c.png",
     "static/media/logonich.45d6b0d7.png": "/portfolio/static/media/logonich.45d6b0d7.png",
     "static/media/me.f96559ba.jpg": "/portfolio/static/media/me.f96559ba.jpg",
-    "static/media/player.2a5047f5.jpg": "/portfolio/static/media/player.2a5047f5.jpg",
-    "static/media/playerMobile.b3d17266.jpg": "/portfolio/static/media/playerMobile.b3d17266.jpg",
-    "static/media/playerdetail.5c84ed92.jpg": "/portfolio/static/media/playerdetail.5c84ed92.jpg",
-    "static/media/playerwork.25a4c440.jpg": "/portfolio/static/media/playerwork.25a4c440.jpg",
-    "static/media/playerworkMobile.df018d00.jpg": "/portfolio/static/media/playerworkMobile.df018d00.jpg",
-    "static/media/puzzle.51ad5fbf.jpg": "/portfolio/static/media/puzzle.51ad5fbf.jpg",
-    "static/media/searchgames.ba0ba9de.jpg": "/portfolio/static/media/searchgames.ba0ba9de.jpg",
-    "static/media/searchgamesMobile.1b25ea81.jpg": "/portfolio/static/media/searchgamesMobile.1b25ea81.jpg"
+    "static/media/playerMobile.bb9d9b97.png": "/portfolio/static/media/playerMobile.bb9d9b97.png",
+    "static/media/playerdetail.d2d54120.png": "/portfolio/static/media/playerdetail.d2d54120.png",
+    "static/media/puzzle.abd82cf6.png": "/portfolio/static/media/puzzle.abd82cf6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7282bef7.js",
-    "static/js/2.4b5698c7.chunk.js",
-    "static/js/main.937707b0.chunk.js"
+    "static/js/runtime-main.3d2de672.js",
+    "static/js/2.7d9b4e62.chunk.js",
+    "static/js/main.c7362e6a.chunk.js"
   ]
 }
