@@ -53,6 +53,10 @@ const Descrip = styled(Description)`
 `;
 
 const ImageAbout = styled(Image)`
+  div {
+    background: grey;
+    width: 100%;
+  }
   @media screen and (max-width: 500px) {
     img {
       height: 30vh;

@@ -30,11 +30,14 @@ const WorkDetail = () => {
             <h2>{work.title}</h2>
             <img src={work.mainImg} alt="work1"></img>
             <p>
-              weblink:
-              <a href={work.link}>{work.link}</a>
-              <br />
-              repository:
-              <a href={work.repository}>{work.repository}</a>
+              <a href={work.link} target="_blank" rel="noreferrer">
+                Visit de website.{" "}
+              </a>
+              /
+              <a href={work.repository} target="_blank" rel="noreferrer">
+                {" "}
+                Look at my repository.
+              </a>
             </p>
           </HeadLine>
           <Works>
@@ -61,23 +64,30 @@ const Details = styled(motion.div)`
 
 const HeadLine = styled.div`
   min-height: 90vh;
-  padding-top: 20vh;
+  padding-top: 8vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   h2 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
+    border-bottom: 1px solid #23d997;
+    width: 55vh;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
   }
   img {
-    width: 100%;
+    width: 60%;
     height: 70vh;
     object-fit: cover;
+
+    box-shadow: 4px 8px 20px black;
+    border-radius: 1rem;
   }
   p {
-    position: absolute;
     margin: 2.5rem 0rem 0.5rem;
-    left: 30%;
+    left: 34.5%;
   }
   a {
     font-size: 1.8rem;
@@ -86,19 +96,26 @@ const HeadLine = styled.div`
     color: #23d997;
   }
   @media screen and (max-width: 500px) {
+    padding-top: 1.8rem;
+    min-height: 85vh;
     h2 {
-      font-size: 2rem;
-      transform: translate(-50%, -30%);
+      font-size: 3.5rem;
+
+      width: 40vh;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #23d997;
+      text-align: center;
     }
     img {
       width: 95%;
-      height: 60vh;
+      height: 50vh;
       object-fit: cover;
       margin: 0rem 1rem 0rem 1rem;
     }
     p {
-      left: 6%;
+      left: 13%;
       font-size: 1.3rem;
+      margin: 0rem;
       a {
         font-size: 1.3rem;
       }
@@ -107,33 +124,43 @@ const HeadLine = styled.div`
 `;
 
 const Works = styled.div`
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
-  margin: 5rem 10rem;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 1500px) {
-    display: block;
-    margin: 2rem 2rem;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
   }
 `;
 
 const InfoStyle = styled.div`
-  padding: 2rem 0rem 2rem 20%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
   h3 {
+    margin: 0rem 1rem;
     font-size: 2rem;
+    border-bottom: 2px solid #23d997;
+    border-radius: 20px;
+    text-align: center;
+    width: 30rem;
+    padding: 1rem;
   }
   h3:first-child {
-    padding-top: 10rem;
+    padding-top: 9rem;
   }
-  .line {
-    width: 30%;
-    background: #23d997;
-    height: 0.5rem;
-    margin: 1rem 0rem;
-  }
+
   p {
     padding: 2rem 0rem;
+    text-align: center;
+    width: 30rem;
+    height: 10rem;
   }
 
   @media screen and (max-width: 500px) {
@@ -142,9 +169,6 @@ const InfoStyle = styled.div`
   }
   p {
     padding: 0.5rem;
-  }
-  .line {
-    width: 80%;
   }
 `;
 
@@ -155,15 +179,21 @@ const ImageDisplay = styled.div`
     height: 100vh;
     object-fit: cover;
   }
+  @media screen and (max-width: 500px) {
+    img {
+      height: 85vh;
+    }
+  }
 `;
 
 //Info Component
 const Info = ({ title, description }) => {
   return (
     <InfoStyle>
-      <h3>{title}</h3>
-      <div className="line"></div>
-      <p>{description}</p>
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
     </InfoStyle>
   );
 };

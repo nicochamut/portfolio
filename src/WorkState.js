@@ -1,14 +1,12 @@
 //Import Images
+import playerdetail from "./img/playerdetail.png";
+import playerMobile from "./img/playerMobile.png";
+import PlayerMainDetail from "./img/PlayerMainDetail.png";
 
-import playerwork from "./img/playerwork.jpg";
-import playerworkMobile from "./img/playerworkMobile.jpg";
-import playerdetail from "./img/playerdetail.jpg";
-import playerMobile from "./img/playerMobile.jpg";
+import ignitedetail from "./img/ignitedetail.png";
+import puzzle from "./img/puzzle.png";
 
-import ignitedetail from "./img/ignitedetail.jpg";
-import searchgames from "./img/searchgames.jpg";
-import searchgamesMobile from "./img/searchgamesMobile.jpg";
-import puzzle from "./img/puzzle.jpg";
+import crudapp from "./img/crudapp.png";
 
 import { MobileImg } from "./components/MobileImg";
 
@@ -16,7 +14,7 @@ export const WorkState = () => {
   return [
     {
       title: "Music Player",
-      mainImg: MobileImg() ? playerworkMobile : playerwork,
+      mainImg: PlayerMainDetail,
       secondaryImg: MobileImg() ? playerMobile : playerdetail,
       url: "/work/musicplayer",
       link: "https://nicochamut.github.io/player/",
@@ -33,10 +31,27 @@ export const WorkState = () => {
       ],
     },
     {
+      title: "CRUD APP",
+      mainImg: crudapp,
+      secondaryImg: crudapp,
+      url: "/work/crudapp",
+      link: "https://nicochamut.github.io/crud/",
+      repository: "https://github.com/nicochamut/crud/",
+      descriptions: [
+        {
+          title: "React Js App",
+          description: "“CRUD(create - read - update - delete) with Hooks.”",
+        },
+        {
+          title: "Responsive Design",
+        },
+      ],
+    },
+    {
       title: "Games Search",
       mainImg: ignitedetail,
       url: "/work/ignitegames",
-      secondaryImg: MobileImg() ? searchgamesMobile : searchgames,
+      secondaryImg: ignitedetail,
       link: "https://nicochamut.github.io/ignitegames/#/",
       repository: "https://github.com/nicochamut/ignitegames",
       descriptions: [

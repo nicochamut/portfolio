@@ -3,9 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // Images
-import ignitegames from "../img/ignitegames.jpg";
-import puzzle from "../img/puzzle.jpg";
-import player from "../img/player.jpg";
+import ignitedetail from "../img/ignitedetail.png";
+import puzzle from "../img/puzzle.png";
+import PlayerMainDetail from "../img/PlayerMainDetail.png";
+import crudapp from "../img/crudapp.png";
+
 // Animation
 import { motion } from "framer-motion";
 import {
@@ -38,8 +40,21 @@ const MyWork = () => {
           <Hide className="link-img">
             <motion.img
               variants={photoAnim}
-              src={player}
+              src={PlayerMainDetail}
               alt="playermusic"
+            ></motion.img>
+          </Hide>
+        </Link>
+      </Movie>
+      <Movie>
+        <motion.h2 variants={fade}>CRUD App</motion.h2>
+        <motion.div variants={lineAnim} className="Line"></motion.div>
+        <Link className="link-img" to="/work/crudapp">
+          <Hide className="link-img">
+            <motion.img
+              variants={photoAnim}
+              src={crudapp}
+              alt="crudapp"
             ></motion.img>
           </Hide>
         </Link>
@@ -48,7 +63,7 @@ const MyWork = () => {
         <h2>API Games</h2>
         <motion.div variants={lineAnim} className="Line"></motion.div>
         <Link to="/work/ignitegames">
-          <img src={ignitegames} alt="games"></img>
+          <img src={ignitedetail} alt="games"></img>
         </Link>
       </Movie>
       <Movie
@@ -81,6 +96,9 @@ const Work = styled(motion.div)`
   @media (max-width: 1300px) {
     padding: 2rem 2rem;
   }
+  @media (max-width: 1300px) {
+    padding: 1rem;
+  }
 `;
 
 const Hide = styled.div`
@@ -89,6 +107,7 @@ const Hide = styled.div`
 
 const Movie = styled(motion.div)`
   padding-bottom: 10rem;
+
   .Line {
     height: 0.3rem;
     background: #23dd97;
@@ -102,7 +121,11 @@ const Movie = styled(motion.div)`
   @media (max-width: 500px) {
     img {
       width: 100%;
-      height: 60vh;
+      height: 50vh;
+      padding: 0rem;
+    }
+    h2 {
+      text-align: center;
     }
   }
 `;

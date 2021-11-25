@@ -136,7 +136,7 @@ const QuoteBox = styled(motion.div)`
   @media screen and (max-width: 500px) {
     h3 {
       font-size: 2rem;
-      width: 28rem;
+      width: 29.5rem;
     }
   }
 `;
