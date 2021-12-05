@@ -26,11 +26,11 @@ export const titleAnim = {
 };
 
 export const titleContact = {
-  hidden: { scale: 3 },
+  hidden: { scale: 2 },
   show: {
     scale: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -47,6 +47,18 @@ export const photoAnim = {
     transition: {
       ease: "easeOut",
       duration: 0.75,
+    },
+  },
+};
+
+export const formAnim = {
+  hidden: { scale: 1.5, opacity: 0 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      ease: "easeOut",
+      duration: 0.5,
     },
   },
 };

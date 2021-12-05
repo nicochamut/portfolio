@@ -19,7 +19,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnim}>
-              <span>Front-end </span>{" "}
+              <span>Frontend </span>{" "}
             </motion.h2>
           </Hide>
           <Hide>
@@ -27,8 +27,8 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Hi! I'm a passionate and autodidactic student with a serious interest
-          in front end development.
+          Hi! I am a self-taught programmer from Argentina with passion for
+          front-end development.
         </motion.p>
       </Descrip>
       <ImageAbout>
@@ -40,11 +40,18 @@ const AboutSection = () => {
 };
 
 const Descrip = styled(Description)`
+  h2 {
+    font-family: "Cormorant Unicase", serif;
+
+    font-size: 5rem;
+  }
   @media screen and (max-width: 500px) {
+    overflow-x: hidden;
     margin: 0px;
     padding: 0px;
     h2 {
       font-size: 3rem;
+      font-family: "Cormorant Garamond", serif;
     }
     p {
       font-size: 1.5rem;

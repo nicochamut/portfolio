@@ -31,7 +31,7 @@ const WorkDetail = () => {
             <img src={work.mainImg} alt="work1"></img>
             <p>
               <a href={work.link} target="_blank" rel="noreferrer">
-                Visit de website.{" "}
+                Visit the website.{" "}
               </a>
               /
               <a href={work.repository} target="_blank" rel="noreferrer">
@@ -147,7 +147,7 @@ const InfoStyle = styled.div`
     margin: 0rem 1rem;
     font-size: 2rem;
     border-bottom: 2px solid #23d997;
-    border-radius: 20px;
+
     text-align: center;
     width: 30rem;
     padding: 1rem;

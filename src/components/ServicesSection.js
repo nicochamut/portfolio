@@ -8,13 +8,16 @@ import {
   JavascriptIcon,
   GitIcon,
   SassIcon,
+  FigmaIcon,
 } from "./icons";
+
 // import Style
 import { About, Description, Hide } from "../style";
 import styled from "styled-components";
 // Animation
 import { scrollReveal, titleAnim } from "../animation";
 import { motion } from "framer-motion";
+import FlipCard from "./FlipCard";
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -25,67 +28,59 @@ const ServicesSection = () => {
       animate={controls}
       ref={element}
     >
-      <Description>
-        <h2>
-          <span>languages</span> I speak
-        </h2>
+      <h2 className="title-language">
+        <span>languages</span> I speak
+      </h2>
+      <DescriptionST>
         <Cards>
-          <Card>
-            <div className="icon">
-              <Html5Icon />
-              <h3>HTML5</h3>
-            </div>
-          </Card>
-          <Card>
-            <div className="icon">
-              <Css3Icon />
-              <h3>CSS3</h3>
-            </div>
-          </Card>
-          <Card>
-            <div className="icon">
-              <SassIcon />
-              <h3>Sass</h3>
-            </div>
-          </Card>
-          <Card>
-            <div className="icon">
-              <JavascriptIcon />
-              <h3>Javascript</h3>
-            </div>
-          </Card>
-          <Card>
-            <div className="icon">
-              <LogoReactIcon />
-              <h3>React JS</h3>
-            </div>
-          </Card>
-          <Card>
-            <div className="icon">
-              <GitIcon />
-              <h3>Git</h3>
-            </div>
-          </Card>
+          <FlipCard front={<Html5Icon />} back="HTML5" />
+
+          <FlipCard front={<Css3Icon />} back="CSS3" />
+
+          <FlipCard front={<SassIcon />} back="Sass" />
+
+          <FlipCard front={<JavascriptIcon />} back="Javascript" />
+
+          <FlipCard front={<LogoReactIcon />} back="React JS" />
+
+          <FlipCard front={<GitIcon />} back="Git" />
+
+          <FlipCard front={<FigmaIcon />} back="Figma" />
         </Cards>
-      </Description>
-      <Hide>
-        <QuoteBox variants={titleAnim}>
-          <h3>
-            I want to excel in this field with hard work, perseverance and
-            dedication. I think that the best
-            <span> skill</span> is the
-            <span> perseverance</span> to keep investigating and adapting to new
-            tools.
-          </h3>
-        </QuoteBox>
-      </Hide>
+        <Hide>
+          <QuoteBox variants={titleAnim}>
+            <h3>
+              I like to <span>code</span> things from <span>scratch</span>, and{" "}
+              enjoy bringing <span>ideas</span> to life in the{" "}
+              <span>browser.</span>
+            </h3>
+          </QuoteBox>
+        </Hide>
+      </DescriptionST>
     </Services>
   );
 };
 
+const DescriptionST = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 5rem;
+  }
+`;
+
 const Services = styled(About)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   h2 {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
+    font-family: "Cormorant Unicase", serif;
   }
 
   p {
@@ -100,29 +95,35 @@ const Services = styled(About)`
       width: 100%;
     }
   }
+  @media (max-width: 500px) {
+    .title-language {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+  }
 `;
 
 const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  grid-gap: 5rem;
+  padding-bottom: 4rem;
+  width: 36%;
   @media (max-width: 1300px) {
     justify-content: space-around;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    grid-template-columns: auto auto;
+    margin-bottom: 2rem;
+    grid-gap: 2.5rem;
   }
 `;
 
 const Card = styled.div`
-  flex-basis: 20rem;
+  width: 100%;
 
-  .icon {
-    display: flex;
-    align-items: center;
-    h3 {
-      margin: 2rem;
-      background: white;
-      color: black;
-      padding: 1rem;
-    }
-  }
   @media (max-width: 1300px) {
     flex-basis: 10rem;
   }
@@ -131,12 +132,17 @@ const Card = styled.div`
 const QuoteBox = styled(motion.div)`
   overflow: hidden;
   color: #23d997;
-  width: 36rem;
-  font-size: 2.3rem;
+  width: 40rem;
+  font-size: 2.5rem;
+  font-family: "Cormorant Garamond", serif;
   @media screen and (max-width: 500px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
     h3 {
       font-size: 2rem;
-      width: 29.5rem;
     }
   }
 `;

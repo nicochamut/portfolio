@@ -22,33 +22,37 @@ const ContactUs = () => {
           <Hide>
             <motion.h2 variants={titleContact}>
               LET'S <br />
-            </motion.h2>
-         
-            <motion.h2 variants={titleContact}>
+              {/* <motion.h2 variants={titleContact}> */}
               <span style={{ marginLeft: 10 + "rem", color: "white" }}>
                 GET IN
               </span>
-            </motion.h2>
-
-            <motion.h2 variants={titleContact}>
-              <span> TOUCH.</span>
+              {/* </motion.h2> */}
+              {/* <motion.h2 variants={titleContact}> */}
+              <span>TOUCH</span>
+              {/* </motion.h2> */}
             </motion.h2>
           </Hide>
         </motion.div>
       </Title>
       <Container>
         <FormEmail />
-       
-        <motion.div variants={fade}>
-          <a
-            href="https://www.instagram.com/nich_dev/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Instagram
-          </a>
-        </motion.div>
       </Container>
+      <motion.div className="Links" variants={fade}>
+        <a
+          href="https://www.instagram.com/nich_dev/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://github.com/nicochamut/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+      </motion.div>
     </Faq>
   );
 };
@@ -56,9 +60,32 @@ const ContactUs = () => {
 const Faq = styled(About)`
   justify-content: space-between;
   padding: 0rem;
+  position: relative;
+  .Links {
+    transform: rotate(90deg);
+    position: absolute;
+    right: -8.2rem;
+    a {
+      text-decoration: none;
+      color: #9e9e9e;
+      font-size: 2rem;
+      transition: ease 0.7s;
+      padding: 1rem;
+    }
+    a:hover {
+      color: #23d997;
+    }
+  }
+
   @media screen and (max-width: 500px) {
     overflow-x: hidden;
     overflow-y: hidden;
+    .Links {
+      transform: rotate(0deg);
+      left: 0;
+      bottom: 2rem;
+      width: 100%;
+    }
     h2 {
       font-size: 2rem;
       flex-direction: column;
@@ -116,24 +143,13 @@ const Container = styled.div`
   align-items: center;
   height: 90vh;
   width: 50%;
-  position: relative;
-  a {
-    text-decoration: none;
-    color: #9e9e9e;
-    transform: rotate(90deg);
-    font-size: 2rem;
-    position: absolute;
-    top: 47%;
-    right: -40px;
-    transition: ease 0.7s;
-  }
-  a:hover {
-    color: #23d997;
-  }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
     width: auto;
     height: 45rem;
-    display: flex;
+  }
+
+  @media screen and (max-width: 500px) {
     flex-direction: column;
     div {
       a {

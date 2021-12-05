@@ -23,7 +23,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work"> MyWork</Link>
+          <Link to="/work"> myWork</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -50,7 +50,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background-color: #282828;
+  background-color: #161616;
 
   position: sticky;
   top: 0;

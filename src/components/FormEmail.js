@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 //ANIMATION
-import { photoAnim } from "../animation";
+import { formAnim } from "../animation";
 
 import send from "../img/send.png";
 import plane from "../img/plane.png";
@@ -40,7 +40,7 @@ const FormEmail = () => {
   };
 
   return (
-    <FormEmailStyled variants={photoAnim}>
+    <FormEmailStyled variants={formAnim}>
       <form ref={form} onSubmit={(e) => sendEmail(e)}>
         <div className="containerForm">
           <div className="name-input">
@@ -239,6 +239,9 @@ const FormEmailStyled = styled(motion.div)`
       }
     }
   }
+  @media screen and (max-width: 1300px) {
+    border: none;
+  }
 
   @media screen and (max-width: 500px) {
     border: none;
@@ -255,7 +258,7 @@ const FormEmailStyled = styled(motion.div)`
       }
       .name-input {
         input {
-          width: 30rem;
+          width: 28rem;
           text-align: center;
         }
       }
@@ -265,7 +268,7 @@ const FormEmailStyled = styled(motion.div)`
           margin-top: 1rem;
         }
         input {
-          width: 30rem;
+          width: 28rem;
           text-align: center;
         }
       }
