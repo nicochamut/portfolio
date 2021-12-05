@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.c7362e6a.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c7362e6a.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.8359729b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.8359729b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.3d2de672.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.3d2de672.js.map",
     "static/js/2.7d9b4e62.chunk.js": "/portfolio/static/js/2.7d9b4e62.chunk.js",
@@ -10,18 +10,17 @@
     "static/js/3.749cd6ab.chunk.js.map": "/portfolio/static/js/3.749cd6ab.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/js/2.7d9b4e62.chunk.js.LICENSE.txt": "/portfolio/static/js/2.7d9b4e62.chunk.js.LICENSE.txt",
-    "static/media/PlayerMainDetail.0596b719.png": "/portfolio/static/media/PlayerMainDetail.0596b719.png",
-    "static/media/crudapp.3577362d.png": "/portfolio/static/media/crudapp.3577362d.png",
-    "static/media/ignitedetail.e092949c.png": "/portfolio/static/media/ignitedetail.e092949c.png",
-    "static/media/logonich.45d6b0d7.png": "/portfolio/static/media/logonich.45d6b0d7.png",
+    "static/media/PlayerMainDetail.adf49323.png": "/portfolio/static/media/PlayerMainDetail.adf49323.png",
+    "static/media/crudapp.e17b97a4.png": "/portfolio/static/media/crudapp.e17b97a4.png",
+    "static/media/ignitedetail.a804cf5a.png": "/portfolio/static/media/ignitedetail.a804cf5a.png",
     "static/media/me.f96559ba.jpg": "/portfolio/static/media/me.f96559ba.jpg",
-    "static/media/playerMobile.bb9d9b97.png": "/portfolio/static/media/playerMobile.bb9d9b97.png",
-    "static/media/playerdetail.d2d54120.png": "/portfolio/static/media/playerdetail.d2d54120.png",
-    "static/media/puzzle.abd82cf6.png": "/portfolio/static/media/puzzle.abd82cf6.png"
+    "static/media/playerMobile.77831014.png": "/portfolio/static/media/playerMobile.77831014.png",
+    "static/media/playerdetail.025c8b98.png": "/portfolio/static/media/playerdetail.025c8b98.png",
+    "static/media/puzzle.0efd0473.png": "/portfolio/static/media/puzzle.0efd0473.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3d2de672.js",
     "static/js/2.7d9b4e62.chunk.js",
-    "static/js/main.c7362e6a.chunk.js"
+    "static/js/main.8359729b.chunk.js"
   ]
 }
